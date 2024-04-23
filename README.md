@@ -21,13 +21,13 @@ JSON Lens is an open-source data visualization app which allows visualization of
 
 ## Tech Stack
 
-- [Next.js](https://nextjs.org/) – framework
-- [TypeScript](https://www.typescriptlang.org/) – language
+- [Next.js](https://nextjs.org/) – Framework
+- [TypeScript](https://www.typescriptlang.org/) – Language
 - [Tailwind](https://tailwindcss.com/) – CSS
-- [Turborepo](https://turbo.build/repo) – monorepo
-- [ReactFlow](https://reactflow.dev/) - visualization
-- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) - state management
-- [Vercel](https://vercel.com/) – deployments
+- [Turborepo](https://turbo.build/repo) – Monorepo
+- [ReactFlow](https://reactflow.dev/) - Visualization
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) - State Management 
+- [Vercel](https://vercel.com/) – Deployments 
 
 ## Roadmap
 
