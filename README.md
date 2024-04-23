@@ -2,11 +2,11 @@
 
 JSON Lens is an open-source data visualization app which allows visualization of JSON in the form of interactive graphs. It works in Web and VSCode.
 
-### Web
+### [Web](https://jsonlens.vercel.app/)
 
 ![Web Preview](https://github.com/mohitkumartoshniwal/jsonlens/raw/main/assets/web.gif)
 
-### VSCode
+### [VSCode](https://marketplace.visualstudio.com/items?itemName=mohitkumartoshniwal.jsonlens)
 
 ![VSCode Preview](https://github.com/mohitkumartoshniwal/jsonlens/raw/main/assets/extension.gif)
 
