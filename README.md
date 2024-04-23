@@ -4,13 +4,13 @@ JSON Lens is an open-source data visualization app which allows visualization of
 
 ### Web
 
-![Web Preview](https://github.com/mohitkumartoshniwal/jsonlens/raw/main/web.gif)
+![Web Preview](https://github.com/mohitkumartoshniwal/jsonlens/raw/main/assets/web.gif)
 
 ### VSCode
 
-![VSCode Preview](https://github.com/mohitkumartoshniwal/jsonlens/raw/main/extension.gif)
+![VSCode Preview](https://github.com/mohitkumartoshniwal/jsonlens/raw/main/assets/extension.gif)
 
-## Features supported
+## Features
 
 - Dark/Light mode
 - Graph mode
@@ -18,6 +18,16 @@ JSON Lens is an open-source data visualization app which allows visualization of
 - Zoom and panning support
 - Import Data from URLs or File System
 - PWA Support
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) – framework
+- [TypeScript](https://www.typescriptlang.org/) – language
+- [Tailwind](https://tailwindcss.com/) – CSS
+- [Turborepo](https://turbo.build/repo) – monorepo
+- [ReactFlow](https://reactflow.dev/) - visualization
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) - state management
+- [Vercel](https://vercel.com/) – deployments
 
 ## Roadmap
 
