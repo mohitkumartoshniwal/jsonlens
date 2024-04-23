@@ -41,3 +41,8 @@ Feel free to [create an issue](https://github.com/mohitkumartoshniwal/jsonlens/i
 ## ⭐️ Show Your Support
 
 Please give a ⭐️ if this project helped you!
+
+## References 
+
+- https://jsoncrack.com/
+- https://www.jsonsea.com/
