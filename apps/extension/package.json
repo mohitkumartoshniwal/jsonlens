@@ -2,7 +2,7 @@
   "name": "jsonlens",
   "displayName": "JSON Lens",
   "description": "Visualize JSON data in interactive Graphs",
-  "version": "0.0.4",
+  "version": "0.0.1",
   "icon": "assets/logo.png",
   "publisher": "mohitkumartoshniwal",
   "repository": "https://github.com/mohitkumartoshniwal/jsonlens/tree/main/apps/extension",
