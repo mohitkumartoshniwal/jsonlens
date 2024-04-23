@@ -1,0 +1,36 @@
+{
+  "name": "extension-ui",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@dagrejs/dagre": "^1.0.4",
+    "@jsonlens/json-parts": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.0.1",
+    "reactflow": "^11.10.3",
+    "zustand": "^4.5.0"
+  },
+  "devDependencies": {
+    "@jsonlens/eslint-config": "workspace:*",
+    "@jsonlens/tailwind-config": "workspace:*",
+    "@jsonlens/typescript-config": "workspace:*",
+    "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "@types/vscode-webview": "^1.57.5",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^8.57.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3",
+    "typescript": "^5.3.3",
+    "vite": "^4.4.5"
+  }
+}

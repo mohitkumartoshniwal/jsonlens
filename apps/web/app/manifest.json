@@ -1,0 +1,35 @@
+{
+  "name": "JSON Lens",
+  "short_name": "JSON Lens",
+  "description": "JSON Lens is a tool for visualizing JSON in graphs, analyzing it, editing it, formatting it and validating it",
+  "theme_color": "rgb(38, 38, 38)",
+  "background_color": "rgb(38, 38, 38)",
+  "display": "standalone",
+  "orientation": "landscape",
+  "scope": "/",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "assets/64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

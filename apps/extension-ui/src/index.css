@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-flow__controls button {
+  @apply dark:bg-black dark:text-white dark:border-none;
+}
+
+.react-flow__controls svg {
+  @apply dark:fill-white;
+}
+
+.dark .react-flow__attribution a {
+  color: black;
+}

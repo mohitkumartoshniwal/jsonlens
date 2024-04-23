@@ -1,0 +1,100 @@
+{
+  "name": "jsonlens",
+  "displayName": "JSON Lens",
+  "description": "Visualize JSON data in interactive Graphs",
+  "version": "0.0.4",
+  "icon": "assets/logo.png",
+  "publisher": "mohitkumartoshniwal",
+  "repository": "https://github.com/mohitkumartoshniwal/jsonlens/tree/main/apps/extension",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Visualization"
+  ],
+  "keywords": [
+    "json",
+    "data",
+    "graph",
+    "visualization",
+    "json visualization",
+    "analyze",
+    "explorer",
+    "viewer"
+  ],
+  "homepage": "https://jsonlens.vercel.app/",
+  "bugs": {
+    "url": "https://github.com/mohitkumartoshniwal/jsonlens/issues"
+  },
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "jsonlens.run",
+        "title": "Open with JSON Lens",
+        "enablement": "resourceExtname == .json || editorLangId == json",
+        "category": "JSON Lens"
+      },
+      {
+        "command": "jsonlens.preview",
+        "title": "Visualize json with JSON Lens",
+        "category": "JSON Lens",
+        "icon": "$(open-preview)"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "jsonlens.run",
+          "group": "navigation@JsonLens",
+          "when": "resourceLangId == json"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "jsonlens.run",
+          "group": "group@JsonLens",
+          "when": "resourceLangId == json"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "jsonlens.preview",
+          "when": "resourceExtname == .json || editorLangId == json",
+          "group": "navigation"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "jsonlens.run",
+          "when": "resourceExtname == .json || editorLangId == json"
+        },
+        {
+          "command": "jsonlens.preview",
+          "when": "false"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "test": "vscode-test",
+    "build:webview": "cd ../extension-ui && pnpm run build && cp -r build ../extension/webview-ui",
+    "watch:webview": "chokidar ../extension-ui/src/**/* --initial=true  -c \"pnpm run build:webview\"",
+    "vscode:prepublish": "pnpm run build:webview && pnpm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/eslint": "^8.56.5",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.88.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "chokidar-cli": "^3.0.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,5 @@
+out
+webview-ui
+node_modules
+.vscode-test/
+*.vsix
