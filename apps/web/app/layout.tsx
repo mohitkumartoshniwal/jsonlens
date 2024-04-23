@@ -9,7 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 const TITLE = "JSON Lens";
 const DESCRIPTION =
   "JSON Lens is a tool for visualizing JSON in graphs, analyzing it, editing it, formatting it and validating it";
-// const OG_IMAGE_URL =""
+const OG_IMAGE_URL =
+  "https://raw.githubusercontent.com/mohitkumartoshniwal/jsonlens/main/apps/web/public/og-image.png";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -19,13 +20,13 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     url: "https://jsonlens.vercel.app",
     siteName: "JSON LENS",
-    // images: [
-    //   {
-    //     url: OG_IMAGE_URL,
-    //     width: 1200,
-    //     height: 630,
-    //   },
-    // ],
+    images: [
+      {
+        url: OG_IMAGE_URL,
+        width: 1200,
+        height: 630,
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: TITLE,
     description: DESCRIPTION,
-    // images: [OG_IMAGE_URL],
+    images: [OG_IMAGE_URL],
   },
 };
 
