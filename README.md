@@ -43,7 +43,7 @@ Feel free to [create an issue](https://github.com/mohitkumartoshniwal/jsonlens/i
 Please give a ⭐️ if this project helped you!
 
 ## Resources 
-Shared ny learnings on how I built the visualization in this [playlist](Reactflow tutorials: https://www.youtube.com/playlist?list=PLpM_sf_d5YTP8tXfvK2uxdVYRnMffwMwr)
+Shared my learnings on how I built the visualization in this [playlist](https://www.youtube.com/playlist?list=PLpM_sf_d5YTP8tXfvK2uxdVYRnMffwMwr)
 
 ## References 
 
