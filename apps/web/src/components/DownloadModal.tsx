@@ -159,84 +159,89 @@ const DownloadModal = ({ isModalOpen, closeModal }: Props) => {
           )}
         </div>
 
-        <div>
-          <label
-            className="block text-sm font-medium mb-1"
-            htmlFor="background-color"
-          >
-            Background Color
-          </label>
-          <div
-            className="w-full flex items-center gap-2 border p-1 rounded-sm dark:border-gray-700 "
-            id="background-color"
-          >
-            <input
-              value={backgroundColor}
-              className="w-5 h-5 bg-white dark:bg-darkBackground"
-              type="color"
-              onChange={(e) => setBackgroundColor(e.target.value)}
-            />
-            <span className="flex-1">{backgroundColor}</span>
-          </div>
-        </div>
+        {[IMAGE_TYPES.JPEG, IMAGE_TYPES.PNG].includes(fileType) && (
+          <>
+            <div>
+              <label
+                className="block text-sm font-medium mb-1"
+                htmlFor="background-color"
+              >
+                Background Color
+              </label>
+              <div
+                className="w-full flex items-center gap-2 border p-1 rounded-sm dark:border-gray-700 "
+                id="background-color"
+              >
+                <input
+                  disabled={fileType === IMAGE_TYPES.SVG}
+                  type="color"
+                  value={backgroundColor}
+                  className="w-5 h-5 bg-white dark:bg-darkBackground"
+                  onChange={(e) => setBackgroundColor(e.target.value)}
+                />
+                <span className="flex-1">{backgroundColor}</span>
+              </div>
+            </div>
 
-        <div className="grid grid-cols-6 gap-x-2 gap-y-2 mb-4 ">
-          <button
-            type="button"
-            onClick={() => setBackgroundColor("#FF5630")}
-            className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#FF5630]"
-          />
-          <button
-            type="button"
-            onClick={() => setBackgroundColor("#FFAB00")}
-            className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#FFAB00]"
-          />
-          <button
-            type="button"
-            onClick={() => setBackgroundColor("#36B37E")}
-            className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#36B37E]"
-          />
-          <button
-            type="button"
-            onClick={() => setBackgroundColor("#00B8D9")}
-            className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#00B8D9]"
-          />
-          <button
-            type="button"
-            onClick={() => setBackgroundColor("#6554C0")}
-            className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#6554C0]"
-          />
-          <button
-            type="button"
-            onClick={() => setBackgroundColor("#FF8B8B")}
-            className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#FF8B8B]"
-          />
-          <button
-            type="button"
-            onClick={() => setBackgroundColor("#FFECB5")}
-            className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#FFECB5]"
-          />
-          <button
-            type="button"
-            onClick={() => setBackgroundColor("#ABF5D1")}
-            className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#ABF5D1]"
-          />
-          <button
-            type="button"
-            onClick={() => setBackgroundColor("#79E2F2")}
-            className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#79E2F2]"
-          />
-          <button
-            type="button"
-            onClick={() => setBackgroundColor("#FAFBFC")}
-            className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#FAFBFC]"
-          />
-          <button
-            type="button"
-            onClick={() => setBackgroundColor("transparent")}
-            className="w-8 h-8 sm:w-12 sm:h-12 rounded-md bg-transparent border-2 border-dashed border-gray-300"
-          />
-        </div>
+            <div className="grid grid-cols-6 gap-x-2 gap-y-2 mb-4 ">
+              <button
+                type="button"
+                onClick={() => setBackgroundColor("#FF5630")}
+                className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#FF5630]"
+              />
+              <button
+                type="button"
+                onClick={() => setBackgroundColor("#FFAB00")}
+                className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#FFAB00]"
+              />
+              <button
+                type="button"
+                onClick={() => setBackgroundColor("#36B37E")}
+                className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#36B37E]"
+              />
+              <button
+                type="button"
+                onClick={() => setBackgroundColor("#00B8D9")}
+                className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#00B8D9]"
+              />
+              <button
+                type="button"
+                onClick={() => setBackgroundColor("#6554C0")}
+                className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#6554C0]"
+              />
+              <button
+                type="button"
+                onClick={() => setBackgroundColor("#FF8B8B")}
+                className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#FF8B8B]"
+              />
+              <button
+                type="button"
+                onClick={() => setBackgroundColor("#FFECB5")}
+                className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#FFECB5]"
+              />
+              <button
+                type="button"
+                onClick={() => setBackgroundColor("#ABF5D1")}
+                className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#ABF5D1]"
+              />
+              <button
+                type="button"
+                onClick={() => setBackgroundColor("#79E2F2")}
+                className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#79E2F2]"
+              />
+              <button
+                type="button"
+                onClick={() => setBackgroundColor("#FAFBFC")}
+                className="w-8 h-8 sm:w-12 sm:h-12 border rounded-md bg-[#FAFBFC]"
+              />
+              <button
+                type="button"
+                onClick={() => setBackgroundColor("transparent")}
+                className="w-8 h-8 sm:w-12 sm:h-12 rounded-md bg-transparent border-2 border-dashed border-gray-300"
+              />
+            </div>
+          </>
+        )}
         <div className="flex justify-center">
           <button
             type="submit"

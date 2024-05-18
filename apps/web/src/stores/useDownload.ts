@@ -67,12 +67,18 @@ export const useDownload = create<typeof downloadInitialState & Actions>(
         backgroundColor,
         width: imageWidth,
         height: imageHeight,
+        cacheBust: true,
         style: {
           width: imageWidth.toString(),
           height: imageHeight.toString(),
           transform: `translate(${transform.x}px, ${transform.y}px) scale(${transform.zoom})`,
         },
       };
+
+      if (fileType === IMAGE_TYPES.SVG) {
+        options.backgroundColor = "transparent";
+      }
+
       let dataUrl = "";
       if (fileType === IMAGE_TYPES.PNG) {
         dataUrl = await toPng(graphViewport, options);
