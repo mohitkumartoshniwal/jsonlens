@@ -15,6 +15,7 @@ JSON Lens is an open-source data visualization app which allows visualization of
 - Dark/Light mode
 - Graph mode
 - Export JSON
+- Download graphs in PNG, SVG and JPEG formats
 - Zoom and panning support
 - Import Data from URLs or File System
 - PWA Support
@@ -26,13 +27,12 @@ JSON Lens is an open-source data visualization app which allows visualization of
 - [Tailwind](https://tailwindcss.com/) – CSS
 - [Turborepo](https://turbo.build/repo) – Monorepo
 - [ReactFlow](https://reactflow.dev/) - Visualization
-- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) - State Management 
-- [Vercel](https://vercel.com/) – Deployments 
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction) - State Management
+- [Vercel](https://vercel.com/) – Deployments
 
 ## Roadmap
 
 - Support other formats like YAML, TOML and XML
-- Export to PNG, SVG and JPEG
 - Show Node Details like json path
 - Offline Support
 
@@ -42,10 +42,11 @@ Feel free to [create an issue](https://github.com/mohitkumartoshniwal/jsonlens/i
 
 Please give a ⭐️ if this project helped you!
 
-## Resources 
+## Resources
+
 Shared my learnings on how I built the application in this [playlist](https://www.youtube.com/playlist?list=PLpM_sf_d5YTP8tXfvK2uxdVYRnMffwMwr)
 
-## References 
+## References
 
 - https://jsoncrack.com/
 - https://www.jsonsea.com/
