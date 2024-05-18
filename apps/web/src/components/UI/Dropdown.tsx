@@ -50,7 +50,7 @@ const Dropdown = ({ label, children }: DropdownProps) => {
         {label} <MdKeyboardArrowDown />
       </button>
       {isOpen && (
-        <div className="absolute left-5 top-8 py-2 flex flex-col items-center gap-1 rounded-md shadow-2xl border px-2 z-20  bg-white dark:bg-dark_shade_1 dark:border-gray-700">
+        <div className="absolute  left-5 top-8 py-2 flex flex-col  gap-1 rounded-md shadow-2xl border px-2 z-20  bg-white dark:bg-dark_shade_1 dark:border-gray-700">
           {clonedChildren}
         </div>
       )}

@@ -6,3 +6,9 @@ export type MinimapTheme = {
   maskColor: ComponentProps<typeof MiniMap>["maskColor"];
   nodeColor: ComponentProps<typeof MiniMap>["nodeColor"];
 };
+
+export enum IMAGE_TYPES {
+  "PNG" = "png",
+  "JPEG" = "jpeg",
+  "SVG" = "svg",
+}

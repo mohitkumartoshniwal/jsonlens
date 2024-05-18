@@ -18,16 +18,19 @@ import { GrGithub } from "react-icons/gr";
 import { TbBrandVscode } from "react-icons/tb";
 import Image from "next/image";
 import { useReactFlow } from "reactflow";
+import DownloadModal from "./DownloadModal";
 
 const Header = () => {
-  const [isFullScreen, setFullScreen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const isEditorVisible = useApp((state) => state.isEditorVisible);
   const toggleEditorVisibilty = useApp((state) => state.toggleEditorVisibilty);
   const contents = useFile((state) => state.contents);
   const { isDarkMode, setTheme } = useCustomTheme();
 
   const { fitView } = useReactFlow();
+
+  const [isFullScreen, setFullScreen] = useState(false);
+  const [isJsonModalOpen, setIsJsonModalOpen] = useState(false);
+  const [isDownloadModalOpen, setIsDownloadModalOpen] = useState(false);
 
   function toggleFullScreen() {
     if (!document.fullscreenElement) {
@@ -89,9 +92,16 @@ const Header = () => {
           />
           <Dropdown label="File">
             <a>
-              <button onClick={() => setIsModalOpen(true)}>Import</button>
+              <button onClick={() => setIsJsonModalOpen(true)}>Import</button>
             </a>
             <a>{contents && <button onClick={exportFile}>Export</button>}</a>
+            <a>
+              {contents && (
+                <button onClick={() => setIsDownloadModalOpen(true)}>
+                  Download
+                </button>
+              )}
+            </a>
           </Dropdown>
         </div>
         <div className="flex items-center gap-1">
@@ -123,8 +133,13 @@ const Header = () => {
         </div>
       </nav>
       <ImportJsonModal
-        isModalOpen={isModalOpen}
-        closeModal={() => setIsModalOpen(false)}
+        isModalOpen={isJsonModalOpen}
+        closeModal={() => setIsJsonModalOpen(false)}
+      />
+
+      <DownloadModal
+        isModalOpen={isDownloadModalOpen}
+        closeModal={() => setIsDownloadModalOpen(false)}
       />
     </>
   );
