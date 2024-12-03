@@ -1,5 +1,5 @@
 "use client";
-
+import { lazy } from "react";
 import { Allotment } from "allotment";
 import "allotment/dist/style.css";
 
@@ -11,7 +11,7 @@ import { useApp } from "../../stores/useApp";
 import { Graph } from "../Graph";
 import { VIEW_TYPES } from "../../types";
 import { useCustomTheme, useFile } from "@jsonlens/json-parts";
-import ReactJson from "@microlink/react-json-view";
+const LazyReactJson = lazy(() => import("@microlink/react-json-view"));
 
 const Main = () => {
   const isEditorVisible = useApp((state) => state.isEditorVisible);
@@ -32,7 +32,7 @@ const Main = () => {
           <Graph />
         ) : (
           // TODO need to set parsed contents in store to handle large json files
-          <ReactJson
+          <LazyReactJson
             src={JSON.parse(contents)}
             theme={isDarkMode ? "summerfruit" : "shapeshifter:inverted"}
           />
