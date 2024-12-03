@@ -45,7 +45,7 @@ const Dropdown = ({ label, children }: DropdownProps) => {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="py-2 px-4 rounded flex items-center"
+        className="py-2 rounded flex items-center"
       >
         {label} <MdKeyboardArrowDown />
       </button>

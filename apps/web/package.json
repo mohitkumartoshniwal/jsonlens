@@ -11,6 +11,7 @@
   "dependencies": {
     "@dagrejs/dagre": "^1.0.4",
     "@jsonlens/json-parts": "workspace:*",
+    "@microlink/react-json-view": "^1.23.4",
     "@monaco-editor/react": "^4.6.0",
     "@vercel/analytics": "^1.2.2",
     "allotment": "^1.20.0",

@@ -12,3 +12,8 @@ export enum IMAGE_TYPES {
   "JPEG" = "jpeg",
   "SVG" = "svg",
 }
+
+export enum VIEW_TYPES {
+  GRAPH,
+  TREE,
+}

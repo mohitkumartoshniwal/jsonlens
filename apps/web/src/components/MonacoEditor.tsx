@@ -2,6 +2,7 @@ import Editor, { useMonaco } from "@monaco-editor/react";
 import { useCallback, useEffect } from "react";
 import { debounce, useCustomTheme, useFile } from "@jsonlens/json-parts";
 import { useApp } from "../stores/useApp";
+import { SAMPLE_DATA } from "../constants/constants";
 
 const editorOptions = {
   formatOnPaste: true,
@@ -43,13 +44,18 @@ const MonacoEditor = () => {
     },
     [setContents]
   );
+
+  function onMount() {
+    setIsLoading(true);
+    setContents(SAMPLE_DATA);
+  }
   return (
     <Editor
       theme={theme}
       height="100%"
       language={format}
       options={editorOptions}
-      onMount={() => setIsLoading(true)}
+      onMount={onMount}
       value={contents}
       onChange={handleGraphChange}
     />
