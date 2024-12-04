@@ -16,7 +16,7 @@ const LazyReactJson = lazy(() => import("@microlink/react-json-view"));
 const Main = () => {
   const isEditorVisible = useApp((state) => state.isEditorVisible);
   const viewType = useApp((state) => state.viewType);
-  const contents = useFile((state) => state.contents);
+  const json = useFile((state) => state.json);
 
   const { isDarkMode } = useCustomTheme();
 
@@ -33,8 +33,9 @@ const Main = () => {
         ) : (
           // TODO need to set parsed contents in store to handle large json files
           <LazyReactJson
-            src={JSON.parse(contents)}
+            src={json}
             theme={isDarkMode ? "summerfruit" : "shapeshifter:inverted"}
+            displayDataTypes={false}
           />
         )}
       </Allotment.Pane>

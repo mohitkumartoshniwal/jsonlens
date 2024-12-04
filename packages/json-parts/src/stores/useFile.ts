@@ -6,6 +6,7 @@ import { contentToJson } from "../utils/json.utils";
 
 type State = {
   contents: string;
+  json: object;
   isValidJson: boolean;
   jsonTree: JsonTree;
   format: FileFormat;
@@ -20,6 +21,7 @@ type Actions = {
 const initialState: State = {
   format: FileFormat.JSON,
   contents: "",
+  json: {},
   isValidJson: false,
   jsonTree: {
     nodes: [],
@@ -33,7 +35,7 @@ export const useFile = create<State & Actions>((set, get) => ({
     try {
       set({ contents });
       const json = await contentToJson(contents, get().format);
-      set({ jsonTree: convertJsonTree(json), isValidJson: true });
+      set({ jsonTree: convertJsonTree(json), isValidJson: true, json });
     } catch (error) {
       set({ isValidJson: false });
     }

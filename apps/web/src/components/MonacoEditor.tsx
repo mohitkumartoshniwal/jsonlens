@@ -27,7 +27,7 @@ const MonacoEditor = () => {
 
   const debouncedSetContents = debounce((contents) => {
     setContents(contents);
-  }, 800);
+  }, 1000);
 
   useEffect(() => {
     monaco?.languages.json.jsonDefaults.setDiagnosticsOptions({
